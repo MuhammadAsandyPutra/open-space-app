@@ -1,8 +1,8 @@
 import React from 'react';
 import { IoEarthOutline } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import LoginInput from '../components/LoginInput';
 import { useDispatch } from 'react-redux';
+import LoginInput from '../components/LoginInput';
 import { asyncSetAuthUser } from '../states/authUser/action';
 
 function LoginPage() {
@@ -10,7 +10,7 @@ function LoginPage() {
 
   const onLogin = ({ id, password }) => {
     // @TODO: dispatch async action to login
-    dispatch(asyncSetAuthUser({id, password}));
+    dispatch(asyncSetAuthUser({ id, password }));
   };
 
   return (
@@ -26,7 +26,7 @@ function LoginPage() {
           ,
           {' '}
           <br />
-          Through Open Space.
+          Through Open Space Apps.
         </h2>
 
         <LoginInput login={onLogin} />
